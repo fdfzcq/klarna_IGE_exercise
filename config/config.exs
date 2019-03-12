@@ -16,6 +16,7 @@ config :klarna_ige_exercise, KlarnaIGEExerciseWeb.Endpoint,
   debug_errors: true,
   code_reloader: true,
   check_origin: false,
+  pubsub: [name: KlarnaIGEExercise.PubSub, adapter: Phoenix.PubSub.PG2],
   watchers: [
     node: [
       "node_modules/webpack/bin/webpack.js",

@@ -11,7 +11,28 @@ import css from "../css/app.css"
 //
 import "phoenix_html"
 
-// Import local files
-//
-// Local files can be imported directly using relative paths, for example:
-// import socket from "./socket"
+var ctx = document.getElementById("pieChart").getContext('2d');
+
+console.log("foo")
+
+var data = {
+    datasets: [{
+        data: [10, 20, 30],
+        backgroundColor: ['#1abc9c', '#2ecc71', '#34495e']
+        //'rgb(255, 99, 132)',
+    }],
+    // These labels appear in the legend and in the tooltips when hovering different arcs
+    labels: [
+        '1',
+        '2',
+        '3'
+    ]
+};
+
+var myPieChart = new Chart(ctx,{
+  type: 'doughnut',
+  data: data,
+  options: []
+});
+
+
